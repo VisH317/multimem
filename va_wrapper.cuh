@@ -86,6 +86,7 @@ public:
         
         for (size_t i = 0; i < handles.size(); ++i) {
             CHECK_CUDA(cuMulticastBindMem(mcHandle, 0, handles[i], 0, size, 0));
+            std::cout<<"bound"<<std::endl;
         }
 
         return mcHandle;
